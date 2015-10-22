@@ -1,0 +1,1 @@
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-102\bin\Debug\PortCOM-102.exe.config

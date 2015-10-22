@@ -1,0 +1,9 @@
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\bin\Debug\PortCOM-101.exe.config
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\bin\Debug\PortCOM-101.exe
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\bin\Debug\PortCOM-101.pdb
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\obj\Debug\PortCOM-101.csprojResolveAssemblyReference.cache
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\obj\Debug\PortCOM_101.Form1.resources
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\obj\Debug\PortCOM_101.Properties.Resources.resources
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\obj\Debug\PortCOM-101.csproj.GenerateResource.Cache
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\obj\Debug\PortCOM-101.exe
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-101\obj\Debug\PortCOM-101.pdb
