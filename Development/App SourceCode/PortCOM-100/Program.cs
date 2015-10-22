@@ -32,12 +32,10 @@ namespace PortCOM_100
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
 
             char[] data= new char[66];
-
             string[] dados = new string[14];
 
             while (true)
