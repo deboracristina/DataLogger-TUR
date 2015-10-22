@@ -1,1 +1,6 @@
 C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-100\bin\Debug\PortCOM-100.exe.config
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-100\bin\Debug\PortCOM-100.exe
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-100\bin\Debug\PortCOM-100.pdb
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-100\obj\Debug\PortCOM-100.csprojResolveAssemblyReference.cache
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-100\obj\Debug\PortCOM-100.exe
+C:\GitHub\DataLogger-TUR\Development\App SourceCode\PortCOM-100\obj\Debug\PortCOM-100.pdb
