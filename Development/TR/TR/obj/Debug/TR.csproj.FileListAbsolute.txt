@@ -9,3 +9,14 @@ C:\GitHub\TR\TR\obj\Debug\TR.exe
 C:\GitHub\TR\TR\obj\Debug\TR.pdb
 C:\GitHub\TR\TR\obj\Debug\TR.equipes.resources
 C:\GitHub\TR\TR\obj\Debug\TR.message.resources
+C:\GitHub\DataLogger-TUR\Development\TR\TR\bin\Debug\TR.exe.config
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.exe
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.pdb
+C:\GitHub\DataLogger-TUR\Development\TR\TR\bin\Debug\TR.exe
+C:\GitHub\DataLogger-TUR\Development\TR\TR\bin\Debug\TR.pdb
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.csprojResolveAssemblyReference.cache
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.equipes.resources
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.Form1.resources
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.message.resources
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.Properties.Resources.resources
+C:\GitHub\DataLogger-TUR\Development\TR\TR\obj\Debug\TR.csproj.GenerateResource.Cache

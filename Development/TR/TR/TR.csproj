@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ControllerData.cs" />
     <Compile Include="equipes.cs">
       <SubType>Form</SubType>
     </Compile>
