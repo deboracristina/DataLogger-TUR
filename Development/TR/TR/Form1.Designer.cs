@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.portasSerialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,16 +61,15 @@
             this.l10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.message = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // menuStrip1
@@ -98,21 +98,22 @@
             // portasToolStripMenuItem
             // 
             this.portasToolStripMenuItem.Name = "portasToolStripMenuItem";
-            this.portasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.portasToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.portasToolStripMenuItem.Text = "portas";
             this.portasToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripDropDownItem_DropDownItemClicked);
+            this.portasToolStripMenuItem.Click += new System.EventHandler(this.portasToolStripMenuItem_Click);
             // 
             // conectarToolStripMenuItem
             // 
             this.conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
-            this.conectarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.conectarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.conectarToolStripMenuItem.Text = "conectar";
             this.conectarToolStripMenuItem.Click += new System.EventHandler(this.conectarToolStripMenuItem_Click);
             // 
             // desconectarToolStripMenuItem
             // 
             this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
-            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.desconectarToolStripMenuItem.Text = "desconectar";
             this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
@@ -157,10 +158,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 46);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Purple;
+            this.label1.Location = new System.Drawing.Point(338, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 46);
+            this.label1.Size = new System.Drawing.Size(182, 46);
             this.label1.TabIndex = 2;
             this.label1.Text = "Categoria:";
             // 
@@ -168,10 +170,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(322, 210);
+            this.label2.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(270, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 39);
+            this.label2.Size = new System.Drawing.Size(48, 41);
             this.label2.TabIndex = 3;
             this.label2.Text = "...";
             // 
@@ -179,10 +182,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(183, 284);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(177, 388);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(288, 39);
+            this.label3.Size = new System.Drawing.Size(302, 39);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tempo Lombada:";
             // 
@@ -211,10 +215,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TR.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Image = global::TR.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 204);
+            this.pictureBox1.Size = new System.Drawing.Size(282, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -224,7 +228,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(220, 374);
+            this.label4.Location = new System.Drawing.Point(251, 451);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 39);
             this.label4.TabIndex = 8;
@@ -235,7 +239,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(220, 443);
+            this.label5.Location = new System.Drawing.Point(251, 498);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 39);
             this.label5.TabIndex = 9;
@@ -245,10 +249,11 @@
             // 
             this.l1.AutoSize = true;
             this.l1.BackColor = System.Drawing.Color.Transparent;
-            this.l1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.l1.Location = new System.Drawing.Point(157, 299);
             this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(75, 39);
+            this.l1.Size = new System.Drawing.Size(65, 40);
             this.l1.TabIndex = 10;
             this.l1.Text = "IDA";
             // 
@@ -256,10 +261,11 @@
             // 
             this.l2.AutoSize = true;
             this.l2.BackColor = System.Drawing.Color.Transparent;
-            this.l2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l2.Font = new System.Drawing.Font("Arial Narrow", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l2.ForeColor = System.Drawing.Color.Red;
             this.l2.Location = new System.Drawing.Point(477, 299);
             this.l2.Name = "l2";
-            this.l2.Size = new System.Drawing.Size(129, 39);
+            this.l2.Size = new System.Drawing.Size(110, 40);
             this.l2.TabIndex = 11;
             this.l2.Text = "VOLTA";
             // 
@@ -267,10 +273,10 @@
             // 
             this.l3.AutoSize = true;
             this.l3.BackColor = System.Drawing.Color.Transparent;
-            this.l3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l3.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l3.Location = new System.Drawing.Point(90, 343);
             this.l3.Name = "l3";
-            this.l3.Size = new System.Drawing.Size(142, 31);
+            this.l3.Size = new System.Drawing.Size(121, 31);
             this.l3.TabIndex = 12;
             this.l3.Text = "MARCA 1:";
             // 
@@ -278,10 +284,10 @@
             // 
             this.l4.AutoSize = true;
             this.l4.BackColor = System.Drawing.Color.Transparent;
-            this.l4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l4.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l4.Location = new System.Drawing.Point(407, 343);
             this.l4.Name = "l4";
-            this.l4.Size = new System.Drawing.Size(142, 31);
+            this.l4.Size = new System.Drawing.Size(121, 31);
             this.l4.TabIndex = 13;
             this.l4.Text = "MARCA 1:";
             // 
@@ -289,10 +295,10 @@
             // 
             this.l5.AutoSize = true;
             this.l5.BackColor = System.Drawing.Color.Transparent;
-            this.l5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l5.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l5.Location = new System.Drawing.Point(90, 395);
             this.l5.Name = "l5";
-            this.l5.Size = new System.Drawing.Size(142, 31);
+            this.l5.Size = new System.Drawing.Size(121, 31);
             this.l5.TabIndex = 15;
             this.l5.Text = "MARCA 2:";
             // 
@@ -300,10 +306,10 @@
             // 
             this.l6.AutoSize = true;
             this.l6.BackColor = System.Drawing.Color.Transparent;
-            this.l6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l6.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l6.Location = new System.Drawing.Point(407, 395);
             this.l6.Name = "l6";
-            this.l6.Size = new System.Drawing.Size(142, 31);
+            this.l6.Size = new System.Drawing.Size(121, 31);
             this.l6.TabIndex = 16;
             this.l6.Text = "MARCA 2:";
             // 
@@ -311,10 +317,10 @@
             // 
             this.l7.AutoSize = true;
             this.l7.BackColor = System.Drawing.Color.Transparent;
-            this.l7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l7.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l7.Location = new System.Drawing.Point(90, 443);
             this.l7.Name = "l7";
-            this.l7.Size = new System.Drawing.Size(142, 31);
+            this.l7.Size = new System.Drawing.Size(121, 31);
             this.l7.TabIndex = 17;
             this.l7.Text = "MARCA 3:";
             // 
@@ -322,10 +328,10 @@
             // 
             this.l8.AutoSize = true;
             this.l8.BackColor = System.Drawing.Color.Transparent;
-            this.l8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l8.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l8.Location = new System.Drawing.Point(407, 443);
             this.l8.Name = "l8";
-            this.l8.Size = new System.Drawing.Size(142, 31);
+            this.l8.Size = new System.Drawing.Size(121, 31);
             this.l8.TabIndex = 18;
             this.l8.Text = "MARCA 3:";
             // 
@@ -333,10 +339,10 @@
             // 
             this.l9.AutoSize = true;
             this.l9.BackColor = System.Drawing.Color.Transparent;
-            this.l9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l9.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l9.Location = new System.Drawing.Point(90, 495);
             this.l9.Name = "l9";
-            this.l9.Size = new System.Drawing.Size(133, 31);
+            this.l9.Size = new System.Drawing.Size(115, 31);
             this.l9.TabIndex = 19;
             this.l9.Text = "VOLTA 1:";
             // 
@@ -344,10 +350,10 @@
             // 
             this.l10.AutoSize = true;
             this.l10.BackColor = System.Drawing.Color.Transparent;
-            this.l10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l10.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l10.Location = new System.Drawing.Point(407, 495);
             this.l10.Name = "l10";
-            this.l10.Size = new System.Drawing.Size(133, 31);
+            this.l10.Size = new System.Drawing.Size(115, 31);
             this.l10.TabIndex = 20;
             this.l10.Text = "VOLTA 2:";
             // 
@@ -355,10 +361,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(367, 132);
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Green;
+            this.label6.Location = new System.Drawing.Point(177, 292);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(239, 40);
+            this.label6.Size = new System.Drawing.Size(210, 42);
             this.label6.TabIndex = 21;
             this.label6.Text = "Tempo Total: ";
             // 
@@ -366,35 +373,37 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(477, 192);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 39);
+            this.label7.Size = new System.Drawing.Size(202, 42);
             this.label7.TabIndex = 22;
             this.label7.Text = "Tempo Total:";
             // 
-            // pictureBox2
+            // logo
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::TR.Properties.Resources.baak_1;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(792, 587);
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logo.Image = global::TR.Properties.Resources.baak_1;
+            this.logo.InitialImage = null;
+            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(792, 587);
+            this.logo.TabIndex = 23;
+            this.logo.TabStop = false;
             // 
             // message
             // 
             this.message.AutoSize = true;
             this.message.BackColor = System.Drawing.Color.Transparent;
-            this.message.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.message.Location = new System.Drawing.Point(375, 192);
+            this.message.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.message.ForeColor = System.Drawing.Color.Red;
+            this.message.Location = new System.Drawing.Point(25, 210);
             this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(84, 39);
+            this.message.Size = new System.Drawing.Size(241, 47);
             this.message.TabIndex = 24;
-            this.message.Text = "TDT";
+            this.message.Text = "Bem vindos!!";
+            this.message.UseCompatibleTextRendering = true;
             // 
             // Form1
             // 
@@ -424,14 +433,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.logo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Torneio de desafios Tecnologicos 1.0";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,7 +479,7 @@
         private System.Windows.Forms.Label l10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
         private System.Windows.Forms.Label message;

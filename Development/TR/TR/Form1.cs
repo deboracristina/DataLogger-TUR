@@ -32,10 +32,12 @@ namespace TR
             InitializeComponent();
             sp.BaudRate = 19200;
             sn = SerialPort.GetPortNames();
+
             foreach (string s in SerialPort.GetPortNames())
             {
                 portasToolStripMenuItem.DropDownItems.Add(s);
             }
+
             l1.Visible = false;
             l2.Visible = false;
             l3.Visible = false;
@@ -47,7 +49,7 @@ namespace TR
             l9.Visible = false;
             l10.Visible = false;
             label7.Visible = false;
-            pictureBox2.BringToFront();
+            logo.BringToFront();
             message.BringToFront();
         }
 
@@ -80,7 +82,7 @@ namespace TR
                 sp.ReadExisting();
 
                 sp.Write("a"); //reenvia informação para solicitar dados do mcu
-                Thread.Sleep(500);
+                Thread.Sleep(70);
                 char[] buffer = new char[66];
                 string[] vars = new string[14];
 
@@ -96,6 +98,7 @@ namespace TR
                                     + buffer[i * 5 + 4].ToString()
                                     + buffer[i * 5 + 5].ToString();
                     }
+
                     atualiza(vars);
                     Console.WriteLine();
                 } 
@@ -133,9 +136,9 @@ namespace TR
 
         private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pictureBox2.BringToFront();
+            logo.BringToFront();
             message.BringToFront();
-            pictureBox2.Visible = true;
+            logo.Visible = true;
             messageToolStripMenuItem.Enabled =  true;
             message.Visible = true;
             timer1.Enabled = false;
@@ -176,12 +179,11 @@ namespace TR
                 {
                     if (cd.categoria.Equals("0"))
                     {
-                        pictureBox2.Visible = false;
+                        logo.Visible = false;
                         message.Visible = false;
                         messageToolStripMenuItem.Enabled = false;
-                        label1.Text = "Categoria:" + "Arrancada";
-                        this.BackgroundImage = new Bitmap(@"C:\GitHub\TR\TR\Resources\baak.jpg");
-                        label3.Location = new Point(183, 284);
+                        label1.Text = "Categoria:" + " ARRANCADA";
+                        this.BackgroundImage = new Bitmap(@"C:\GitHub\DataLogger-TUR\Development\TR\TR\Resources\baak.jpg");
                         label3.Text = "Tempo Lombada: " + cl.vars[4];
                         label4.Visible = true;
                         label5.Visible = true;
@@ -199,7 +201,9 @@ namespace TR
                         label3.Visible = true;
                         label6.Visible = true;
                         label7.Visible = false;
-                        label2.Text = eq.s[cont];
+                        if (cont >(eq.s.Length-1))
+                            cont--;
+                        label2.Text =  eq.s[cont];
                     }
                     else MessageBox.Show("Mude a chave!");
                 }
@@ -218,10 +222,10 @@ namespace TR
                 {
                     if (cd.categoria.Equals("1"))
                     {
-                        pictureBox2.Visible = false;
+                        logo.Visible = false;
                         message.Visible = false;
                         messageToolStripMenuItem.Enabled = false;
-                        label1.Text = "Categoria:" + "Percurso";
+                        label1.Text = "Categoria:" + " PERCURSO";
                         this.BackgroundImage = new Bitmap(@"C:\GitHub\TR\TR\Resources\back percur2.jpg");
                         label7.Location = new Point(114, 218);
                         label4.Visible = false;
@@ -240,6 +244,8 @@ namespace TR
                         label7.Visible = true;
                         label2.Location = new Point(318, 158);
                         label3.Visible = false;
+                        if (cont > (eq.s.Length - 1))
+                            cont--;
                         label2.Text = eq.s[cont];
                     }
                     else MessageBox.Show("Mude a chave!");
@@ -271,11 +277,11 @@ namespace TR
             label4.Text = "Início: " + var[2];
             label5.Text = "Fim: " + var[3];
             l3.Text = "MARCA 1:" + var[6];
-            l4.Text = "MARCA 1:" + var[12];
+            l4.Text = "MARCA 3:" + var[10];
             l5.Text = "MARCA 2:" + var[7];
             l6.Text = "MARCA 2:" + var[11];
             l7.Text = "MARCA 3:" + var[8];
-            l8.Text = "MARCA 3:" + var[10];
+            l8.Text = "MARCA 1:" + var[12];
             l9.Text = "VOLTA 1:" + var[9];
             l10.Text = "VOLTA 2:" + var[13];
             label6.Text = "Tempo Total: " + var[1];
@@ -293,6 +299,12 @@ namespace TR
         {
             ms.ShowDialog();
             message.Text = ms.s;
+        }
+
+        private void portasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            
         } // mensagem da pag inicial
 
     }
